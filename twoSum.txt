@@ -1,0 +1,34 @@
+//两数之和的C++版本
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> index;
+        for(int i=0;i<nums.size()-1;i++){
+            for(int j=i+1;j<nums.size();j++){
+                if(nums[i]+nums[j]==target){
+                    index.push_back(i);
+                    index.push_back(j);
+                }
+            }
+        }
+        return index;
+    }
+};
+
+//两数之和的python版本
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        tmpnum = [target-ele for ele in nums]
+        idx = []
+        for i in range(len(tmpnum)):
+            if tmpnum[i] in  nums:
+                if nums.index(tmpnum[i])!=i:
+                    idx.append(nums.index(tmpnum[i]))
+                    idx.append(i)
+        return set(idx)
