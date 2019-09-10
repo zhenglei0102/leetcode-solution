@@ -1,0 +1,41 @@
+//无重复字符的长度C++代码
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int  size,i=0,j,k,max=0;
+        size = s.size();
+        for(j = 0;j<size;j++){
+            for(k = i;k<j;k++)
+                if(s[k]==s[j]){
+                    i = k+1;
+                    break;
+                }
+            if(j-i+1 > max)
+                max = j-i+1;
+        }
+        return max;
+    }
+};
+
+#python版本
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        win = []
+        leng = []
+        if s == "":
+            return 0
+        if s == " ":
+            return 1
+        for i in range(len(s)):
+            if s[i] in win:
+                leng.append(len(win))
+                t = win.index(s[i])
+                win = win[t+1:]
+                win.append(s[i])   
+            else:
+                win.append(s[i])
+        leng.append(len(win))
+        if len(leng) == 0:
+            return 0
+        else:
+            return max(leng)
