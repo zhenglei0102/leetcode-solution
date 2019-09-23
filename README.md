@@ -6,4 +6,4 @@
 1、twosum.txt --两数之和的代码方案<br>
 2、AddTwoNums.txt --两数相加的代码方案<br>
 3、lengthOfLongestSubstring.txt --无重复字符的最小子串的长度<br>
-4、findMedianSortedArrays.txt --寻找两个有序数组的中位数<br>
+4、[findMedianSortedArrays.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/findMedianSortedArrays.txt) --寻找两个有序数组的中位数<br>
