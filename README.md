@@ -7,3 +7,4 @@
 2、[AddTwoNums.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/AddTwoNums.txt) --两数相加的代码方案<br>
 3、[lengthOfLongestSubstring.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/lengthOfLongestSubstring.txt) --无重复字符的最小子串的长度<br>
 4、[findMedianSortedArrays.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/findMedianSortedArrays.txt) --寻找两个有序数组的中位数<br>
+5、[longestPalindrome.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/longestPalindrome.txt) --最长回文子串<br>
