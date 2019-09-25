@@ -1,0 +1,38 @@
+##python
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        if x<10 and x>-10:
+            return x
+        strx = str(x)
+        reverse_strx = ''
+        for i in range(len(strx)-1,-1,-1):
+            if strx[i] == '-':
+                continue
+            else:
+                reverse_strx += strx[i]
+        if strx[0] == '-':
+            result = -1*int(reverse_strx)
+        else:
+            result = int(reverse_strx)
+        if result<(-1*pow(2,31)) or result>pow(2,31)-1:
+            return 0
+        else:
+            return result
+        
+
+//c++
+class Solution {
+public:
+    int reverse(int x) {
+        int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            if (rev > INT_MAX/10 || (rev == INT_MAX / 10 && pop > 7)) return 0;
+            if (rev < INT_MIN/10 || (rev == INT_MIN / 10 && pop < -8)) return 0;
+            rev = rev * 10 + pop;
+        }
+        return rev;
+    }
+};
