@@ -1,0 +1,41 @@
+//c++版本
+class Solution {
+public:
+    int myAtoi(string str) {
+        if(str.empty()){
+            return 0;
+        }
+        int i = 0;
+        long long res = 0;
+        int flag = 1;
+        while(i<str.size() &&str[i]==' '){
+            ++i;
+        }
+        if(i==str.size()){
+            return 0;
+        }
+        if(str[i]=='-'){
+            flag = -1;
+            ++i;
+        }
+        else if(str[i]=='+'){
+            flag = 1;
+            ++i;
+        }
+        while(i<str.size() && (str[i]>='0'&&str[i]<='9')){
+        //字符串中的数字对应的有asic码，‘0’对应48，‘1’对应49，int('0')返回值是48并不是0，故下式中需要减去'0'，才是对应的整型
+            res = res * 10 + str[i++] - '0'; 
+            if(res>=2147483648){
+                if(flag==1)return INT_MAX;
+                else return INT_MIN;
+            }
+        }
+        return res * flag;
+    }
+};
+
+#python版本
+class Solution:
+    def myAtoi(self, str: str) -> int:
+        return max(min(int(*re.findall('^[\+\-]?\d+', str.lstrip())), 2**31 - 1), -2**31)
+#注释：re前面的*号用于获得数值，因为re返回的是个列表；lstrip()用于跳过最左边的空格
