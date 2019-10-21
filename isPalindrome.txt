@@ -16,6 +16,27 @@ public:
         return true;
     }
 };
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        unsigned int res = 0;
+        int tmp = x;
+        while(x>=10){
+            res = res * 10 + x%10;
+            x = x/10;
+        }
+        res = res * 10 + x;
+        cout<<res<<endl;
+        if(res==tmp){
+            return true;
+        }
+        else
+            return false;
+    }
+};
 
 #python版本
 class Solution:
