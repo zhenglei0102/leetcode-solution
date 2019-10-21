@@ -9,3 +9,4 @@
 4、[findMedianSortedArrays.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/findMedianSortedArrays.txt) --寻找两个有序数组的中位数<br>
 5、[longestPalindrome.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/longestPalindrome.txt) --最长回文子串<br>
 6、[reverse.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/reverse.txt) --整数反转<br>
+7、[myAtoi.txt](https://github.com/zhenglei0102/leetcode-solution/blob/master/myAtoi.txt) --字符串转换整数<br>
