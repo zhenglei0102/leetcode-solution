@@ -1,0 +1,29 @@
+//c++版本
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        string strx = to_string(x);
+        int  k = strx.size()-1;
+        for(int i = 0;i<int(strx.size()/2);i++)
+        {
+            if(strx[i] != strx[k--]){
+                return false;
+            }
+        }
+        return true;
+    }
+};
+
+#python版本
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x<0:
+            return False
+        else:
+            if str(x)[::-1] == str(x):
+                return True
+            else:
+                return False
